@@ -10,7 +10,7 @@ interface ArticleCardProps {
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
   const imageUrl =
-    article.media?.[0]?.["media-metadata"]?.[0]?.url || "/images/no-photo.jpg";
+    article.media?.[0]?.["media-metadata"]?.[2]?.url || "/images/no-photo.jpg";
   return (
     <Link href={`/articles/${article.id}`} passHref>
       <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer h-full">

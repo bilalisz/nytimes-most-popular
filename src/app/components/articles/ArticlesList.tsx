@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ArticleCard from "./ArticleCard";
 import { Article } from "@/app/types/articles";
@@ -10,15 +11,13 @@ interface ArticleListProps {
   error: string | null;
 }
 
-const ArticleList: React.FC<ArticleListProps> = ({
-  articles,
-  loading,
-  error,
-}) => {
+const ArticleList: React.FC<ArticleListProps> = (props) => {
+  const { articles, loading, error } = props;
+
   if (loading) return <LoadingSpinner className="my-5" />;
-  if (error) return <ErrorMessage message={error} />;
+  if (error) return <ErrorMessage message={error} className="mt-5" />;
   if (articles.length === 0)
-    return <ErrorMessage message="No articles found" />;
+    return <ErrorMessage message="No articles found" className="mt-5" />;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-5">

@@ -13,11 +13,9 @@ export const useArticles = (period: number = 1) => {
     try {
       setLoading(true);
       setError(null);
-
       const response = await fetch(
         `${BASE_URL}/${period}.json?api-key=${NYT_API_KEY}`
       );
-      console.log(response);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
