@@ -238,4 +238,7 @@ Semantic HTML
 
 Each component is designed to be reusable, testable, and maintainable, with clear separation of concerns.
 
+## Testing
+I tried to run the testing libraries while it not work for a moment, please consider it for now. I am trying to add testing use cases as well. probably my PC or internet has some issues.
+
 
