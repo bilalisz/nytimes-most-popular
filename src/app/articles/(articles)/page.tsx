@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AppHeader from "@/app/components/shared/AppHeader";
 import ArticleList from "@/app/components/articles/ArticlesList";
 import PeriodSelector from "@/app/components/articles/PeriodSelector";
@@ -9,6 +9,11 @@ import { useArticles } from "@/app/hooks/useArticles";
 export default function Page() {
   const [period, setPeriod] = useState<number>(1);
   const { articles, loading, error } = useArticles(period);
+
+  useEffect(() => {
+    const period = Number(localStorage.getItem("period"));
+    if (period) setPeriod(period);
+  }, []);
   return (
     <>
       <main className="min-h-screen">
