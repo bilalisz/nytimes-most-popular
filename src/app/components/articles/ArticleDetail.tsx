@@ -32,13 +32,14 @@ const ArticleDetailPage = () => {
   if (error) return <ErrorMessage message={error} className="min-h-screen" />;
   if (!article)
     return (
-      <div className="min-h-screen flex justify-center items-center">
+      <div className="min-h-screen flex justify-center items-center flex-col gap-2">
         <p className="text-2xl">Article not found</p>
+        <BackButton route={"/articles"} />
       </div>
     );
 
   const imageUrl =
-    article.media?.[0]?.["media-metadata"]?.[2]?.url || "/placeholder.jpg";
+    article.media?.[0]?.["media-metadata"]?.[2]?.url || "/images/no-photo.jpg";
   const publishedDate = formatDate(article.published_date);
 
   return (
