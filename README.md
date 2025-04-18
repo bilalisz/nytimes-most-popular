@@ -93,7 +93,7 @@ This application uses the NY Times Most Popular API:
 
 Endpoint: https://api.nytimes.com/svc/mostpopular/v2/viewed/{period}.json
 
-.Period options: 1, 7, or 30 days
+Period options: 1, 7, or 30 days
 
 Rate limit: 4000 requests per day
 
@@ -103,7 +103,7 @@ Rate limit: 4000 requests per day
 Location: src/components/AppHeader.tsx
 
 Purpose:
-The header component that appears at the top of every page, containing the logo and period selector.
+The header component, which contains the logo and period selector, appears at the top of every page.
 
 Key Features:
 Displays the application logo
@@ -157,7 +157,7 @@ Purpose:
 Dropdown component for selecting the time period of articles to view.
 
 Key Features:
-Custom styled select dropdown
+Custom-styled select dropdown
 Preserves selection in localStorage
 Accessible keyboard navigation
 
@@ -231,9 +231,11 @@ Props are strictly typed
 
 Responsive Design:
 Mobile-first approach
-Tailwind's responsive prefixes used throughout
+Tailwind's responsive prefixes are used throughout
 
 Accessibility:
 Semantic HTML
 
 Each component is designed to be reusable, testable, and maintainable, with clear separation of concerns.
+
+
