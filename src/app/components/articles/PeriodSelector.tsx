@@ -17,7 +17,7 @@ const PeriodSelector: React.FC<PeriodSelectorProps> = ({
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const handlePeriodSelect = (period: number) => {
-    localStorage.setItem("period", period.toString());
+    sessionStorage.setItem("period", period.toString());
     onPeriodChange(period);
     setIsOpen(false);
   };

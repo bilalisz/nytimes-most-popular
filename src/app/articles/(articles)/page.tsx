@@ -11,7 +11,7 @@ export default function Page() {
   const { articles, loading, error } = useArticles(period);
 
   useEffect(() => {
-    const period = Number(localStorage.getItem("period"));
+    const period = Number(sessionStorage.getItem("period"));
     if (period) setPeriod(period);
   }, []);
   return (

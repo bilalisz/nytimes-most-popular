@@ -16,7 +16,7 @@ import { formatDate } from "@/app/utils/functions";
 const ArticleDetailPage = () => {
   const [article, setArticle] = useState<Article | null>(null);
   const { id } = useParams();
-  const period = Number(localStorage.getItem("period"));
+  const period = Number(sessionStorage.getItem("period"));
   const { articles, error, loading } = useArticles(period);
 
   useEffect(() => {

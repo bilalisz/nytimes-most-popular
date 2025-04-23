@@ -158,7 +158,7 @@ Dropdown component for selecting the time period of articles to view.
 
 Key Features:
 Custom-styled select dropdown
-Preserves selection in localStorage
+Preserves selection in sessionStorage
 Accessible keyboard navigation
 
 6- LoadingSpinner
@@ -239,6 +239,5 @@ Semantic HTML
 Each component is designed to be reusable, testable, and maintainable, with clear separation of concerns.
 
 ## Testing
+
 I tried to run the testing libraries while it not work for a moment, please consider it for now. I am trying to add testing use cases as well. probably my PC or internet has some issues.
-
-
